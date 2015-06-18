@@ -7,7 +7,7 @@ branches:
 script:
   - apt-get install -y screen curl
   - ./acceptanceTest.sh
-  - curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
+  - mkdir test; cd test; curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
 notifications:
   email:
   - alexander.willner@tu-berlin.de
