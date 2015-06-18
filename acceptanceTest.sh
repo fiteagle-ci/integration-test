@@ -33,7 +33,7 @@ while [[ ! $(./xmlrpc-client.sh -t https://localhost:8443/sfa/api/am/v3 GetVersi
 done
 ./runJfed_local.sh
 RET=$?
-
+echo "RET: ${RET}"
 screen -S wildfly -X kill
 #killall -9 java
 #rm -rf ${TARGET}
