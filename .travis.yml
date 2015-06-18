@@ -7,7 +7,7 @@ branches:
 before_script:
   - sudo apt-get install screen
 script:
-  - apt-get install -y screen curl
+  - sudo apt-get install -y screen curl
   - ./acceptanceTest.sh
   - mkdir test; cd test; curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
 notifications:

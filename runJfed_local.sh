@@ -23,5 +23,4 @@ echo "jfed error code $?"
 
 DIR=$(ls -td test-result*|head -n1)
 
-ln -s $DIR result
-grep " failheader" -c ./result/result.html
+grep " failheader" -c ./${DIR}/result.html
