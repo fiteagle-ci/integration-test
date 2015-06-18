@@ -1,0 +1,15 @@
+language: java
+jdk:
+  - oraclejdk8
+branches:
+  only:
+    - master
+script:
+  - apt-get install -y screen curl
+  - ./acceptanceTest.sh
+notifications:
+  email:
+    - fiteagle.dev@av.tu-berlin.de
+cache:
+  directories:
+  - $HOME/.m2
