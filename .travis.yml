@@ -7,9 +7,14 @@ branches:
 script:
   - apt-get install -y screen curl
   - ./acceptanceTest.sh
+  - curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
 notifications:
   email:
-    - fiteagle.dev@av.tu-berlin.de
+  - alexander.willner@tu-berlin.de
+  - fiteagle.dev@av.tu-berlin.de
+  slack:
+    secure: JmNq1sGb57RBYnQZFE+3EDN31ya+Jd1puzFFWzYt6z/MJPw+Ib+hlCdDbniu3CRZnxJWNndbHUA6DTjtxjT9fJxH8/nEwIjY46xXHVyDduqkmLfTydihDsS1AeHph51oeHaqWNVK5Z3in/qRCWIbjiADrKaHalF0Uz6QaCDuCNg=
 cache:
   directories:
   - $HOME/.m2
+
