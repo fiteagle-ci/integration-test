@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 PWD=$(pwd)
 #TARGET=$(mktemp -d 2>/dev/null || mktemp -d -t "fiteagle")
-TARGET="${PWD/test_dir"
+TARGET="${PWD}/test_dir"
 echo "using TARGET: ${TARGET} HOME: ${HOME}"
 rm -rf ${TARGET};
 mkdir -p ${TARGET};
