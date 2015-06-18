@@ -5,6 +5,7 @@ branches:
   only:
   - master
 before_script:
+- sudo apt-get update
 - sudo apt-get install -y screen curl
 script:
 - ./acceptanceTest.sh
@@ -15,6 +16,3 @@ notifications:
   - fiteagle.dev@av.tu-berlin.de
   slack:
     secure: cdyFVCjmSA/i4HT5yT0RrjGE4aIKahj1llfO/tiWwvaPY+h6RWDoO44gQ/+Z4/sSZvLNM1RihFVXCWmTCOr3U2S3KnbtiEBvUZU/mzK69Qr3mucr6tp05vGFGPBNwMuTkCU+D2886Kj2G3akw47Vkhk8jZ5tIS7QVxo9NmheuCrddV/bWIkiAPG4dsM6IjHzsWkh5gvA4hhTZq4aovSrluh5OSkwndIOA1qZZE5IBkziD6NI+HrjdMVb6qrNotLCrJh0zg7WaLbcBzmKMTRb+PpgHIDA1Zpv6UPkD1qb27yI+5IsiOIuqMzEe5gRdr7B3Nt9o0isISiYPGuo9cCRbztPI5yeDYy9e/gom4K6wJn6kolr5GOibgnnu2uCMIc7QcrRvHB+h3jP+uTDlXOwrybeGRxbquOeM7ykeTRxrwLLSTrRQvPi+dayXoj5Qh0SndGHqiGEAzHEACjQ4XGDmsiFo3Sr9twHmu1rhcZlye+tXkbXqLFZDqClvj7pBds927/I0NESzXo1VtCf1g2uOkIvucl/Tgc2+ZulGnr+XkaK/FcKN8U0thgRM/sTptF+bytJoq77j/gl0i0zFtVuQbirWYbSknwme+K8u9DWkNEdqWuwyHsZiTnCnVtYokAZ8cfyz9dFRBFvSOs7i7rApbzsjFRylKp03cCYqD3nOFM=
-cache:
-  directories:
-  - $HOME/.m2
