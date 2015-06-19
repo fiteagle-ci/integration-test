@@ -2,10 +2,15 @@
 
 echo "docker build tests..."
 
-_CACHE_DIR="./m2_cache"
+_CACHE_DIR=$(pwd)"/m2_cache"
 
-if [[ $1 = "-r" ]]; then
-	docker build --tag=ft2test --rm ./build-test-docker/
+runcmd() {
+	echo "cmd: $1"
+	$1
+}
+
+if [ "$1" = "-r" ]; then
+	runcmd "docker build --tag=ft2-buildtest --rm $(pwd)/build-test-docker/" || exit
 fi
 
-docker run -rm -it -v /root/.m2:${_CACHE_DIR} ft2buildTest
+runcmd "docker run --rm -it -v \"${_CACHE_DIR}/:/root/.m2/\" ft2-buildtest"
