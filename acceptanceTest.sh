@@ -35,6 +35,14 @@ done
 ./runJfed_local.sh
 RET=$?
 echo "RET: ${RET}"
+
+if [ $RET -gt 0 ]; then
+	sleep 10
+	./runJfed_local.sh
+	RET=$?
+	echo "RET: ${RET}"
+fi
+
 screen -S wildfly -X kill
 #killall -9 java
 #rm -rf ${TARGET}
