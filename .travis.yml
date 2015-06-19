@@ -9,8 +9,8 @@ before_script:
 - sudo apt-get update
 - sudo apt-get install -y screen curl
 script:
-#- ./acceptanceTest.sh
-- mkdir test; cd test; curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
+- ./acceptanceTest.sh
+#- mkdir test; cd test; curl -fsSkL fiteagle.org/bootstrap | bash -s init deployFT2 deployFT2sfa testFT2sfa
 notifications:
   email:
   - alexander.willner@tu-berlin.de
