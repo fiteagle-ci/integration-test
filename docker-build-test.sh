@@ -13,4 +13,4 @@ if [ "$1" = "-r" ]; then
 	runcmd "docker build --tag=ft2-buildtest --rm $(pwd)/build-test-docker/" || exit
 fi
 
-runcmd "docker run --rm -it -v \"${_CACHE_DIR}/:/root/.m2/\" ft2-buildtest"
+runcmd "docker run --rm -it -v ${_CACHE_DIR}/:/root/.m2/ ft2-buildtest"
