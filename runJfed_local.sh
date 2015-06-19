@@ -19,8 +19,9 @@ java \
    -p conf/cli.properties \
   --group createsliver 
 
-echo "jfed error code $?"
+RET=$?
+echo "jfed error code ${RET}"
 
-DIR=$(ls -td test-result*|head -n1)
+#DIR=$(ls -td test-result*|head -n1)
 
-[[ $(grep " failheader" -c ./${DIR}/result.html) = 0 ]]
+#[[ $(grep " failheader" -c ./${DIR}/result.html) = 0 ]]
